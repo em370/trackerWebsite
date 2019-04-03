@@ -1,5 +1,6 @@
 var express = require('express');
 var app = require('express')();
+var SocketServer = require('ws').Server;
 //var uuid= require('tower-uuid');
 //var useragent = require('express-useragent');
 var server = require('http').createServer(app);
@@ -17,6 +18,18 @@ const osc = new OSC({ plugin: new OSC.BridgePlugin(config) })
   host: 'localhost',    // @param {string} Hostname of WebSocket server
   port: 9912            // @param {number} Port of WebSocket server
 });
+
+server.listen(port, function(){
+  console.log('listening on port: '+ port);
+});
+
+const wss = new SocketServer({ server });
+
+wss.on('connection', (ws) => {
+  console.log('Client connected');
+  ws.on('close', () => console.log('Client disconnected'));
+});
+
 //console.log(uuid());
 //app.use(useragent.express());
 app.get('/', function(req, res){
@@ -108,6 +121,4 @@ io.sockets.on('connection', function(socket){
 	});	
 });
 */
-server.listen(port, function(){
-  console.log('listening on port: '+ port);
-});
+
