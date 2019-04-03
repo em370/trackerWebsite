@@ -3,8 +3,8 @@ $('document').ready(function(){
 //const plugin = new OSC.WebsocketClientPlugin({ port: 9912 })
 //const osc = new OSC({ plugin: plugin })
 
-		$('#appendhere').append('<a id = "send"  class="ui huge green button"> Yes </a>');
-		$('#appendhere').append('<a href ="signup" class="ui huge green button"> No </a>');
+		$('#appendhere').append('<a class="ui huge green button"> Yes </a>');
+		$('#appendhere').append('<a class="ui huge green button"> No </a>');
 	
 		var arr = ["Are", "Watching", "You","We"];
 
