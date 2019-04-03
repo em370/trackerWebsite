@@ -6,17 +6,20 @@ $('document').ready(function(){
 		$('#appendhere').append('<a id = "send"  class="ui huge green button"> Yes </a>');
 		$('#appendhere').append('<a href ="signup" class="ui huge green button"> No </a>');
 	
-		var arr = ["Religion", "Science", "Politics", "Philosophy", "Education", "Food", "Sports", "Ethics", "Culture", "Music", "Hobbies", "Movies and Film", "Literature", "Comedy", "Something", "Anything"];
+		var arr = ["Are", "Watching", "You","We"];
 
 	var i = 0;
 
 	var topic;
-      var HOST = location.origin.replace(/^http/, 'ws')
-      var ws = new WebSocket(HOST);
-      var el = document.getElementById('server-time');
-      ws.onmessage = function (event) {
-        el.innerHTML = 'Server time: ' + event.data;
-      };
+	var HOST = location.origin.replace(/^http/, 'ws')
+	var ws = new WebSocket(HOST);
+	var faceDict;
+	  //var el = document.getElementById('server-time');
+	ws.onmessage = function (event) {
+		//console.log(event.data);
+		faceDict = JSON.parse(event.data);
+		drawPeople();
+	};
 	function getTopic() {
 		if (i < arr.length) {
 			topic = arr[i];
@@ -25,6 +28,17 @@ $('document').ready(function(){
 			i = 0;
 		}
 		return topic;
+	}
+	
+	function drawPeople(){
+		var keys = Object.keys(faceDict);
+
+		for(var i = 0; i < keys.length;i++){
+		   //keys[i] for key
+		   //dictionary[keys[i]] for the value
+		   console.log(keys[i]);
+		   console.log(faceDict[keys[i]]);
+		}
 	}
 
 	setInterval(function(){ document.getElementById('topic').innerHTML = getTopic(); }, 1250);

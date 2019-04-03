@@ -10,14 +10,15 @@ var port = process.env.PORT || 3000;
 //var translate = require('yandex-translate')(key);
 app.use(express.static('public'));
 var defaultNsps = '/';
-const OSC = require('osc-js')
+var faceDict = {};
+//const OSC = require('osc-js')
 
-const config = { udpClient: { port: 9912 } }
-const osc = new OSC({ plugin: new OSC.BridgePlugin(config) })
-	osc.open({
-  host: 'localhost',    // @param {string} Hostname of WebSocket server
-  port: 9912            // @param {number} Port of WebSocket server
-});
+//const config = { udpClient: { port: 9912 } }
+//const osc = new OSC({ plugin: new OSC.BridgePlugin(config) })
+//	osc.open({
+//  host: 'localhost',    // @param {string} Hostname of WebSocket server
+//  port: 9912            // @param {number} Port of WebSocket server
+//});
 
 server.listen(port, function(){
   console.log('listening on port: '+ port);
@@ -30,28 +31,29 @@ wss.on('connection', (ws) => {
   ws.on('close', () => console.log('Client disconnected'));
 });
 
+
+wss.on('connection', function connection(ws) {
+  console.log("CONNECTION");
+  ws.on('message', function incoming(data) {
+    // Broadcast to everyone else.
+    //wss.broadcast(data);
+	//console.log(data);
+	jData = JSON.parse(data);
+
+	faceDict[jData[0]] = [jData[1],jData[2]];
+	console.log(faceDict);
+  });
+});
+
+setInterval(() => {
+  wss.clients.forEach((client) => {
+    client.send(JSON.stringify(faceDict));
+  });
+}, 1000);
+
 //console.log(uuid());
 //app.use(useragent.express());
-app.get('/', function(req, res){
 
-	res.sendFile(__dirname + '/public/html/home.html');
-});
-
-app.get('/lang', function(req, res){
-	res.sendFile(__dirname + '/public/html/lang.html');
-});
-
-app.get('/signup', function(req, res){
-	res.sendFile(__dirname + '/public/html/signup.html');
-});
-
-app.get('/test', function(req, res){
-	res.sendFile(__dirname + '/public/html/test.html');
-});
-
-app.get('/signin', function(req, res){
-	res.sendFile(__dirname + '/public/html/signin.html');
-});
 
 /*
 app.get('/chat', function(req, res){
@@ -65,17 +67,7 @@ app.get('/chat', function(req, res){
 	}
 });
 */
-app.get('/aboutus', function(req, res){
-	res.sendFile(__dirname + '/public/html/aboutus.html');
-});
 
-app.get('/wait', function(req, res){
-	res.sendFile(__dirname + '/public/html/wait.html');
-});
-
-app.get('/forgotten', function(req, res){
-	res.sendFile(__dirname + '/public/html/forgotten.html');
-});
 /*
 io.sockets.on('connection', function(socket){
 	console.log('a user connected');
