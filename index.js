@@ -9,6 +9,14 @@ var port = process.env.PORT || 3000;
 //var translate = require('yandex-translate')(key);
 app.use(express.static('public'));
 var defaultNsps = '/';
+const OSC = require('osc-js')
+
+const config = { udpClient: { port: 9912 } }
+const osc = new OSC({ plugin: new OSC.BridgePlugin(config) })
+	osc.open({
+  host: 'localhost',    // @param {string} Hostname of WebSocket server
+  port: 9912            // @param {number} Port of WebSocket server
+});
 //console.log(uuid());
 //app.use(useragent.express());
 app.get('/', function(req, res){

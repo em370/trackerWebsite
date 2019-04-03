@@ -1,16 +1,11 @@
 
 $('document').ready(function(){
-	var user = ref.getAuth();
-	if(!user)
-	{
-		$('#appendhere').append('<a href ="signin" class="ui huge green button"> Yes </a>');
+const plugin = new OSC.WebsocketClientPlugin({ port: 9912 })
+const osc = new OSC({ plugin: plugin })
+
+		$('#appendhere').append('<a id = "send"  class="ui huge green button"> Yes </a>');
 		$('#appendhere').append('<a href ="signup" class="ui huge green button"> No </a>');
-	}
-	else
-	{
-		$('#setter').text("Ready to Meet Some New People?")
-		$('#appendhere').append('<a href ="chat" class="ui huge green button"> Head to Chat! </a>');
-	}
+	
 		var arr = ["Religion", "Science", "Politics", "Philosophy", "Education", "Food", "Sports", "Ethics", "Culture", "Music", "Hobbies", "Movies and Film", "Literature", "Comedy", "Something", "Anything"];
 
 	var i = 0;
@@ -28,7 +23,18 @@ $('document').ready(function(){
 	}
 
 	setInterval(function(){ document.getElementById('topic').innerHTML = getTopic(); }, 1250);
+	
+	//var osc = new OSC();
+	osc.open({
+  host: 'localhost',    // @param {string} Hostname of WebSocket server
+  port: 9912            // @param {number} Port of WebSocket server
+}); // connect by default to ws://localhost:8080
 
+	document.getElementById('send').addEventListener('click', () => {
+		var message = new OSC.Message('/test/random', Math.random());
+		osc.send(message);
+		console.log("Hello world!");
+	});
 
 });
 
