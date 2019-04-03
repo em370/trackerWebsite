@@ -53,6 +53,10 @@ setInterval(() => {
 
 //console.log(uuid());
 //app.use(useragent.express());
+app.get('/', function(req, res){
+
+	res.sendFile(__dirname + '/public/html/home.html');
+});
 
 
 /*
