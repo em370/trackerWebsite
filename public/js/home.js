@@ -11,7 +11,7 @@
 var sketch = function(p) {
     p.setup = function(){
       p.createCanvas(windowWidth, windowHeight-400);
-			cnv.style('display', 'block');
+			//p.style('display', 'block');
 			noLoop();
     }
   };
