@@ -110,7 +110,8 @@ function draw() {
 	ws.onmessage = function (event) {
 		//console.log(event.data);
 		faceDict = JSON.parse(event.data);
-		drawPeople();
+		setup();
+		draw();
 	};
 	function getTopic() {
 		if (i < arr.length) {
