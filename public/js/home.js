@@ -15,9 +15,9 @@ var sketch = function(p) {
 			noLoop();
     }
   };
-  var node = document.createElement('div');
+  var node = document.createElement("div");
   new p5(sketch, node);
-  window.document.getElementById('#sketchContainer').appendChild(node);
+  window.document.getElementById("sketchContainer").appendChild(node);
 
 function draw() {
 	background(200);
