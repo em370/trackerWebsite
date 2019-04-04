@@ -17,7 +17,7 @@ var sketch = function(p) {
   };
   var node = document.createElement('div');
   new p5(sketch, node);
-  window.document.getElementById('#sketchContainer')[0].appendChild(node);
+  window.document.getElementById('#sketchContainer').appendChild(node);
 
 function draw() {
 	background(200);
