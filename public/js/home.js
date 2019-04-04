@@ -1,3 +1,9 @@
+function setup() {
+	createCanvas(720, 400);
+	// Starts in the middle
+	x = width / 2;
+	y = height;
+}
 $('document').ready(function(){
 //const plugin = new OSC.WebsocketClientPlugin({ port: 9912 })
 //const osc = new OSC({ plugin: plugin })
@@ -16,12 +22,7 @@ $('document').ready(function(){
 	// Where is the circle
 	var x, y;
 
-	function setup() {
-	  createCanvas(720, 400);
-	  // Starts in the middle
-	  x = width / 2;
-	  y = height;
-	}
+
 
 	function draw() {
 	  background(200);
