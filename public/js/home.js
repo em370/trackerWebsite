@@ -36,7 +36,7 @@ $('document').ready(function(){
 		   //keys[i] for key
 		   //dictionary[keys[i]] for the value
 			 console.log("name:"+keys[i]);
-		   console.log("pos:"+faceDict[keys[i]);
+		   console.log("pos:"+faceDict[keys[i]]);
 			 var position = faceDict[keys[i];
 		}
 	}
