@@ -124,7 +124,7 @@ $('document').ready(function(){
 			 for(var i=0;i<position.length;i++){
 				 console.log(position[i]);
 			 }
-			 x = position[0]+350;
+			 x = position[0]+180;
 			 y = position[1]+350;
 			 redraw();
 		}
