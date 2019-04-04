@@ -26,10 +26,10 @@ server.listen(port, function(){
 
 const wss = new SocketServer({ server });
 
-wss.on('connection', (ws) => {
-  console.log('Client connected');
-  ws.on('close', () => console.log('Client disconnected'));
-});
+//wss.on('connection', (ws) => {
+//  console.log('Client connected');
+//  ws.on('close', () => console.log('Client disconnected'));
+//});
 
 
 wss.on('connection', function connection(ws) {
@@ -41,12 +41,13 @@ wss.on('connection', function connection(ws) {
 	jData = JSON.parse(data);
 
 	faceDict[jData[0]] = [jData[1],jData[2]];
-	console.log(faceDict);
+	//console.log(faceDict);
   });
 });
 
 setInterval(() => {
   wss.clients.forEach((client) => {
+	  console.log(JSON.stringify(faceDict));
     client.send(JSON.stringify(faceDict));
   });
 }, 1000);
