@@ -39,7 +39,7 @@ $('document').ready(function(){
 		   console.log("pos:"+faceDict[keys[i]]);
 			 var position = faceDict[keys[i]];
 			 for(var i=0;i<position.length;i++){
-				 console.log(pos[i]);
+				 console.log(position[i]);
 			 }
 		}
 	}
