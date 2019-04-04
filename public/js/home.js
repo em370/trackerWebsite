@@ -1,4 +1,3 @@
-
 $('document').ready(function(){
 //const plugin = new OSC.WebsocketClientPlugin({ port: 9912 })
 //const osc = new OSC({ plugin: plugin })
@@ -14,7 +13,6 @@ $('document').ready(function(){
 	var HOST = location.origin.replace(/^http/, 'ws')
 	var ws = new WebSocket(HOST);
 	var faceDict;
-
 	  //var el = document.getElementById('server-time');
 	ws.onmessage = function (event) {
 		//console.log(event.data);
@@ -37,8 +35,8 @@ $('document').ready(function(){
 		for(var i = 0; i < keys.length;i++){
 		   //keys[i] for key
 		   //dictionary[keys[i]] for the value
-		   console.log("name "+keys[i]);
-		   console.log("position "+faceDict[keys[i]]);
+		   console.log(keys[i]);
+		   console.log(faceDict[keys[i]]);
 		}
 	}
 
