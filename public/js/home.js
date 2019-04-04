@@ -1,6 +1,7 @@
 	var x, y, name;
 function setup() {
-	createCanvas(720, 400);
+	var cnv = createCanvas(windowWidth, windowHeight);
+  cnv.style('display', 'block');
 	// Starts in the middle
 	// x = width / 2;
 	// y = height;
