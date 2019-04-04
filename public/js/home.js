@@ -7,7 +7,7 @@ function setup() {
 
 function draw() {
 	background(200);
-	drawPeople();
+	// drawPeople();
 	// HEEL OF THE  LEFT FOOT
 	stroke(139,69,19);
 	fill(160,82,45);
