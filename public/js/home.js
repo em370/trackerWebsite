@@ -25,7 +25,7 @@ $('document').ready(function(){
 
 	function draw() {
 	  background(200);
-
+		drawPeople();
 	  // HEEL OF THE  LEFT FOOT
 	  stroke(139,69,19);
 	  fill(160,82,45);
@@ -101,7 +101,8 @@ $('document').ready(function(){
 	ws.onmessage = function (event) {
 		//console.log(event.data);
 		faceDict = JSON.parse(event.data);
-		drawPeople();
+		setup();
+		draw();
 	};
 	function getTopic() {
 		if (i < arr.length) {
