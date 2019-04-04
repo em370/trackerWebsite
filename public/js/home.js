@@ -35,8 +35,9 @@ $('document').ready(function(){
 		for(var i = 0; i < keys.length;i++){
 		   //keys[i] for key
 		   //dictionary[keys[i]] for the value
-		   console.log(keys[i]);
-		   console.log(faceDict[keys[i]]);
+		   console.log("x:"+keys[1]);
+			 console.log("y:"+keys[1]);
+		   console.log("name:"+faceDict[keys[i]]);
 		}
 	}
 
