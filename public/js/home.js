@@ -1,13 +1,14 @@
+	var x, y, name;
 function setup() {
 	createCanvas(720, 400);
 	// Starts in the middle
-	x = width / 2;
-	y = height;
+	// x = width / 2;
+	// y = height;
+	noLoop();
 }
 
 function draw() {
 	background(200);
-	// drawPeople();
 	// HEEL OF THE  LEFT FOOT
 	stroke(139,69,19);
 	fill(160,82,45);
@@ -65,7 +66,7 @@ function draw() {
 
 	textSize(25);
 	fill(50);
-	text('supriya', x+55, y-100);
+	text(name, x+55, y-100);
 
 //   // Jiggling randomly on the horizontal axis
 //   x = x + random(-1, 1);
@@ -93,20 +94,12 @@ $('document').ready(function(){
 	var HOST = location.origin.replace(/^http/, 'ws')
 	var ws = new WebSocket(HOST);
 	var faceDict;
-	// Where is the circle
-	var x, y;
-
-
-
-
-
 
 	  //var el = document.getElementById('server-time');
 	ws.onmessage = function (event) {
 		//console.log(event.data);
 		faceDict = JSON.parse(event.data);
-		setup();
-		draw();
+		drawPeople();
 	};
 	function getTopic() {
 		if (i < arr.length) {
@@ -124,14 +117,16 @@ $('document').ready(function(){
 		for(var i = 0; i < keys.length;i++){
 		   //keys[i] for key
 		   //dictionary[keys[i]] for the value
+			 name = keys[i];
 			 console.log("name:"+keys[i]);
 		   // console.log("pos:"+faceDict[keys[i]]);
 			 var position = faceDict[keys[i]];
 			 for(var i=0;i<position.length;i++){
 				 console.log(position[i]);
 			 }
-			 var x1 = position[0];
-			 var y1 = position[1];
+			 x = position[0];
+			 y = position[1];
+			 redraw();
 		}
 	}
 
