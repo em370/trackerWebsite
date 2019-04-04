@@ -1,12 +1,23 @@
 	var x, y, name;
-function setup() {
-	var cnv = createCanvas(windowWidth, windowHeight);
-  cnv.style('display', 'block');
-	// Starts in the middle
-	// x = width / 2;
-	// y = height;
-	noLoop();
-}
+// function setup() {
+// 	var cnv = createCanvas(windowWidth, windowHeight);
+//   cnv.style('display', 'block');
+// 	// Starts in the middle
+// 	// x = width / 2;
+// 	// y = height;
+// 	noLoop();
+// }
+
+var sketch = function(p) {
+    p.setup = function(){
+      p.createCanvas(windowWidth, windowHeight-400);
+			cnv.style('display', 'block');
+			noLoop();
+    }
+  };
+  var node = document.createElement('div');
+  new p5(sketch, node);
+  window.document.getElementById('#sketchContainer')[0].appendChild(node);
 
 function draw() {
 	background(200);
