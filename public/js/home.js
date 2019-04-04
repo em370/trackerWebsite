@@ -127,8 +127,9 @@ $('document').ready(function(){
 			 }
 			 x = position[0]+180;
 			 y = position[1]+350;
-			 redraw();
+
 		}
+		redraw();
 	}
 
 	setInterval(function(){ document.getElementById('topic').innerHTML = getTopic(); }, 1250);
