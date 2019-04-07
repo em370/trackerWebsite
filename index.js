@@ -11,6 +11,18 @@ var port = process.env.PORT || 3000;
 app.use(express.static('public'));
 var defaultNsps = '/';
 var faceDict = {};
+
+var start = new Date();
+
+var changeThresh = 20; //max distance for a detection to change face location
+var directionThresh = 2; // min distance needed to change feet direction
+var dropTime = 3000; // in ms
+var detectionsNeeded = 30; //number of connected detections before face is accepted
+
+// faceDict format: {name} =  [lateral position, depth, camera, lastDetection, numDetections, direction]
+
+//direction is an angle in radians
+
 //const OSC = require('osc-js')
 
 //const config = { udpClient: { port: 9912 } }
@@ -38,17 +50,65 @@ wss.on('connection', function connection(ws) {
     // Broadcast to everyone else.
     //wss.broadcast(data);
 	//console.log(data);
+	
+	// faceDict format: {name} =  [lateral position, depth, camera, lastDetection, numDetections,angle]
+	// received data format: [name, lateral position, depth, camera]
 	jData = JSON.parse(data);
-
-	faceDict[jData[0]] = [jData[1],jData[2]];
-	//console.log(faceDict);
+	
+	if(jData[0] in faceDict){
+	
+		newFace = [jData[1],jData[2], jData[3]];
+		oldFace = faceDict[jData[0]];
+		var delX = oldFace[0]-newFace[0];
+		var delY = oldFace[0]-newFace[0];
+		
+		var dist = Math.sqrt( Math.pow(delX,2) + Math.pow(delY,2) );
+		if(oldFace[2] == newFace[2] &&dist<changeThresh){
+			
+			if (dist >directionThresh){
+				faceDict[jData[0]] = [jData[1],jData[2],jData[3],new Date(),oldFace[4]+1,Math.atan2(delY,delX)];
+			}else{
+				faceDict[jData[0]] = [jData[1],jData[2],jData[3],new Date(),oldFace[4]+1,oldFace[5]];
+			}
+		}
+		//faceDict[jData[0]] = [jData[1],jData[2]];
+		//console.log(faceDict);
+	} else{
+		faceDict[jData[0]] = [jData[1],jData[2],jData[3],new Date(),1,Math.PI/2];
+	}
   });
 });
 
 setInterval(() => {
+	var sendDict = {};
+	
+	keys = Object.keys(faceDict);
+// faceDict format: {name} =  [lateral position, depth, camera, lastDetection, numDetections,angle]
+	for(var i = 0; i < keys.length;i++){
+		var name = keys[i];
+		var currFace = faceDict[name];
+		var lateral = currFace[0];
+		var depth = currFace[1];
+		var camera = currFace[2];
+		var lastDetection = currFace[3];
+		var numDetections = currFace[4];
+		var angle = currFace[5];
+	   
+		var deadTime = new Date() - lastDetection;
+	   
+		if (deadTime > dropTime){
+		   delete faceDict[keys[i]];
+		}else{
+		   if (numDetections>detectionsNeeded){
+			   sendDict[name] = [lateral,depth,camera,lastDetection,numDetections,angle];
+		   }
+		}
+	}
+	
+	
   wss.clients.forEach((client) => {
-	  console.log(JSON.stringify(faceDict));
-    client.send(JSON.stringify(faceDict));
+	  console.log(JSON.stringify(sendDict));
+    client.send(JSON.stringify(sendDict));
   });
 }, 1000);
 
