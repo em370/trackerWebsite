@@ -11,7 +11,7 @@ var port = process.env.PORT || 3000;
 app.use(express.static('public'));
 var defaultNsps = '/';
 var faceDict = {};
-
+var prevDict = {};
 var start = new Date();
 
 var changeThresh = 20; //max distance for a detection to change face location
@@ -65,11 +65,11 @@ wss.on('connection', function connection(ws) {
 		var dist = Math.sqrt( Math.pow(delX,2) + Math.pow(delY,2) );
 		if(oldFace[2] == newFace[2] &&dist<changeThresh){
 			
-			if (dist >directionThresh){
-				faceDict[jData[0]] = [jData[1],jData[2],jData[3],new Date(),oldFace[4]+1,Math.atan2(delY,delX)];
-			}else{
+			//if (dist >directionThresh){
 				faceDict[jData[0]] = [jData[1],jData[2],jData[3],new Date(),oldFace[4]+1,oldFace[5]];
-			}
+			//}else{
+			//	faceDict[jData[0]] = [jData[1],jData[2],jData[3],new Date(),oldFace[4]+1,oldFace[5]];
+			//}
 		}
 		//faceDict[jData[0]] = [jData[1],jData[2]];
 		//console.log(faceDict);
@@ -85,10 +85,32 @@ setInterval(() => {
 	keys = Object.keys(faceDict);
 // faceDict format: {name} =  [lateral position, depth, camera, lastDetection, numDetections,angle]
 	for(var i = 0; i < keys.length;i++){
+		
+		
+		
+		
+		
 		var name = keys[i];
+			
 		var currFace = faceDict[name];
 		var lateral = currFace[0];
 		var depth = currFace[1];
+		
+		if(name in prevDict){
+			//console.log(prevDict);
+			//console.log(faceDict);
+			var prevFace = prevDict[name];
+			var prevLateral = prevFace[0];
+			var prevDepth = prevFace[1];
+			
+			var delX = lateral-prevLateral;
+			var delY = depth-prevDepth;
+			
+			currFace[5] = Math.atan2(delY,delX);
+			//console.log(currFace[5]);
+		}
+		
+		
 		var camera = currFace[2];
 		var lastDetection = currFace[3];
 		var numDetections = currFace[4];
@@ -104,7 +126,7 @@ setInterval(() => {
 		   }
 		}
 	}
-	
+	Object.assign(prevDict,faceDict);
 	
   wss.clients.forEach((client) => {
 	  console.log(JSON.stringify(sendDict));
