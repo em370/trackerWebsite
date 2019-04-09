@@ -14,7 +14,7 @@ var faceDict = {};
 var prevDict = {};
 var start = new Date();
 
-var changeThresh = 20; //max distance for a detection to change face location
+var changeThresh = 100; //max distance for a detection to change face location
 var directionThresh = 2; // min distance needed to change feet direction
 var dropTime = 3000; // in ms
 var detectionsNeeded = 30; //number of connected detections before face is accepted

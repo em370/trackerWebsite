@@ -1,15 +1,12 @@
 
 
-	var x, y, name, faceDict, cameraOffsets;
-	faceDict = {};
-	cameraOffsets = [100, 1100, 2100, 3100, 4100];
+	var x, y, name, faceDict;
 function setup() {
-	var cnv = createCanvas(windowWidth, 4300);
+	var cnv = createCanvas(windowWidth, windowHeight);
   cnv.style('display', 'block');
 	// Starts in the middle
 	// x = width / 2;
 	// y = height;
-	redraw();
 	noLoop();
 }
 
@@ -26,35 +23,7 @@ function setup() {
 
 function draw() {
 	background(200);
-	stroke(0);
-	textSize(25);
-	fill(50);
-	text("camera 1", 50, cameraOffsets[0]-50);
-	line(0, cameraOffsets[0], width, cameraOffsets[0]);
-	keys = Object.keys(faceDict);
 	
-	textSize(25);
-	fill(50);
-	text("camera 2", 50, cameraOffsets[1]-50);
-	line(0, cameraOffsets[1], width, cameraOffsets[1]);
-	keys = Object.keys(faceDict);
-	
-	textSize(25);
-	fill(50);
-	text("camera 3", 50, cameraOffsets[2]-50);
-	line(0, cameraOffsets[2], width, cameraOffsets[2]);
-	keys = Object.keys(faceDict);
-	
-		textSize(25);
-	fill(50);
-	text("camera 4", 50, cameraOffsets[3]-50);
-	line(0, cameraOffsets[3], width, cameraOffsets[3]);
-	keys = Object.keys(faceDict);
-	
-		textSize(25);
-	fill(50);
-	text("camera 5", 50, cameraOffsets[4]-50);
-	line(0, cameraOffsets[4], width, cameraOffsets[4]);
 	keys = Object.keys(faceDict);
 
 	for(var i = 0; i < keys.length;i++){
@@ -62,10 +31,10 @@ function draw() {
 	   //dictionary[keys[i]] for the value
 		 name = keys[i];
 		 console.log("name:"+keys[i]);
-		 var faceData = faceDict[keys[i]];
-		 x = faceData[0]+180;
-		 y = 10*(faceData[1]-1)+50+cameraOffsets[faceData[2]];
-		
+		 var position = faceDict[keys[i]];
+		 x = position[0]+180;
+		 y = 10*position[1]+250;
+	
 	
 	
 	// HEEL OF THE  LEFT FOOT
@@ -195,7 +164,7 @@ $('document').ready(function(){
 		}
 		
 	}
-	
+
 	setInterval(function(){ document.getElementById('topic').innerHTML = getTopic(); }, 1250);
 
 	//var osc = new OSC();
