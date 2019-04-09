@@ -4,7 +4,7 @@
 	faceDict = {};
 	cameraOffsets = [100, 1100, 2100, 3100, 4100];
 function setup() {
-	var cnv = createCanvas(windowWidth, 4300);
+	var cnv = createCanvas(windowWidth, 5100);
   cnv.style('display', 'block');
 	// Starts in the middle
 	// x = width / 2;
@@ -29,31 +29,31 @@ function draw() {
 	stroke(0);
 	textSize(25);
 	fill(50);
-	text("camera 1", 50, cameraOffsets[0]-50);
+	text("camera 0", 50, cameraOffsets[0]-50);
 	line(0, cameraOffsets[0], width, cameraOffsets[0]);
 	keys = Object.keys(faceDict);
 	
 	textSize(25);
 	fill(50);
-	text("camera 2", 50, cameraOffsets[1]-50);
+	text("camera 1", 50, cameraOffsets[1]-50);
 	line(0, cameraOffsets[1], width, cameraOffsets[1]);
 	keys = Object.keys(faceDict);
 	
 	textSize(25);
 	fill(50);
-	text("camera 3", 50, cameraOffsets[2]-50);
+	text("camera 2", 50, cameraOffsets[2]-50);
 	line(0, cameraOffsets[2], width, cameraOffsets[2]);
 	keys = Object.keys(faceDict);
 	
 		textSize(25);
 	fill(50);
-	text("camera 4", 50, cameraOffsets[3]-50);
+	text("camera 3", 50, cameraOffsets[3]-50);
 	line(0, cameraOffsets[3], width, cameraOffsets[3]);
 	keys = Object.keys(faceDict);
 	
 		textSize(25);
 	fill(50);
-	text("camera 5", 50, cameraOffsets[4]-50);
+	text("camera 4", 50, cameraOffsets[4]-50);
 	line(0, cameraOffsets[4], width, cameraOffsets[4]);
 	keys = Object.keys(faceDict);
 
