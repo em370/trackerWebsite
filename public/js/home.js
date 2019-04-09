@@ -189,6 +189,7 @@ $('document').ready(function(){
 			 for(var j=0;i<position.length;i++){
 				 console.log(position[i]);
 			 }
+console.log("Supriya");
 			 x = position[0]+200;
 			 y = position[1]+350;
 			//redraw();
