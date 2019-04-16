@@ -1,5 +1,5 @@
 
-
+// faceDict format: {name} =  [lateral position, depth, camera, lastDetection, numDetections, direction]
 	var x, y, name, faceDict, cameraOffsets;
 	faceDict = {};
 	cameraOffsets = [100, 1100, 2100, 3100, 4100];
@@ -63,8 +63,8 @@ function draw() {
 		 name = keys[i];
 		 console.log("name:"+keys[i]);
 		 var faceData = faceDict[keys[i]];
-		 x = 1000*faceData[0]+180;
-		 y = 200*(faceData[1])+50+cameraOffsets[faceData[2]];
+		 x = 150*faceData[0]+400;
+		 y = 150*(faceData[1])+50+cameraOffsets[faceData[2]];
 		
 	
 	
