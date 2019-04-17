@@ -23,7 +23,7 @@ function setup() {
 
 function draw() {
 	background(200);
-	
+
 	keys = Object.keys(faceDict);
 
 	for(var i = 0; i < keys.length;i++){
@@ -34,9 +34,9 @@ function draw() {
 		 var position = faceDict[keys[i]];
 		 x = position[0]+180;
 		 y = 10*position[1]+250;
-	
-	
-	
+
+
+
 	// HEEL OF THE  LEFT FOOT
 		stroke(139,69,19);
 		fill(160,82,45);
@@ -140,7 +140,7 @@ $('document').ready(function(){
 		} else {
 			topic = arr[0];
 			i = 1;
-			
+
 		}
 		return topic;
 	}
@@ -155,14 +155,14 @@ $('document').ready(function(){
 			 console.log("name:"+keys[i]);
 		   // console.log("pos:"+faceDict[keys[i]]);
 			 var position = faceDict[keys[i]];
-			 for(var j=0;i<position.length;i++){
-				 console.log(position[i]);
+			 for(var j=0;j<position.length;j++){
+				 console.log(position[j]);
 			 }
 			 x = position[0]+180;
 			 y = position[1]+350;
 			//redraw();
 		}
-		
+
 	}
 
 	setInterval(function(){ document.getElementById('topic').innerHTML = getTopic(); }, 1250);
@@ -179,12 +179,12 @@ $('document').ready(function(){
 		console.log("Hello world!");
 	});
 
-	
-	
+
+
 	/*
 	function draw() {
 		background(200);
-		
+
 		keys = Object.keys(faceDict);
 
 		for(var i = 0; i < keys.length;i++){
@@ -195,9 +195,9 @@ $('document').ready(function(){
 			 var position = faceDict[keys[i]];
 			 x = position[0]+180;
 			 y = position[1]+350;
-		
-		
-		
+
+
+
 		// HEEL OF THE  LEFT FOOT
 			stroke(139,69,19);
 			fill(160,82,45);
@@ -269,5 +269,5 @@ $('document').ready(function(){
 		}
 	}
 	*/
-	
+
 });
