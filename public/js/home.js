@@ -63,8 +63,8 @@ function draw() {
 		 name = keys[i];
 		 console.log("name:"+keys[i]);
 		 var faceData = faceDict[keys[i]];
-		 x = 150*faceData[0]+400;
-		 y = 150*(faceData[1])+50+cameraOffsets[faceData[2]];
+		 x = faceData[0]+400;
+		 y = 10*(faceData[1])+50+cameraOffsets[faceData[2]];
 		
 	
 	
