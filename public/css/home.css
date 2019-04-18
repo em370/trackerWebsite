@@ -1,7 +1,7 @@
-.segment
+/* .segment
 {
 	height: 90vh;
-}
+} */
 .ui.header.blue
 {
 	margin-top: 1.60em;
@@ -10,6 +10,10 @@
 }
 .ui.header.green
 {
+	olor: #e3d29d;
+  /* opacity:0.9; */
+  font-family: "Trattatello", fantasy;
+  font-style: italic;
 	margin-top: 0em;
 	font-size: 4em;
 	font-family: 'Happy Monkey', cursive;

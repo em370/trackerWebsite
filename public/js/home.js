@@ -9,7 +9,7 @@ function setup() {
 	// Starts in the middle
 	// x = width / 2;
 	// y = height;
-	redraw();
+	// redraw();
 	noLoop();
 }
 
@@ -26,35 +26,35 @@ function setup() {
 
 function draw() {
 	background(200);
-	stroke(0);
-	textSize(25);
-	fill(50);
-	text("camera 0", 50, cameraOffsets[0]-50);
-	line(0, cameraOffsets[0], width, cameraOffsets[0]);
-	keys = Object.keys(faceDict);
-	
-	textSize(25);
-	fill(50);
-	text("camera 1", 50, cameraOffsets[1]-50);
-	line(0, cameraOffsets[1], width, cameraOffsets[1]);
-	keys = Object.keys(faceDict);
-	
-	textSize(25);
-	fill(50);
-	text("camera 2", 50, cameraOffsets[2]-50);
-	line(0, cameraOffsets[2], width, cameraOffsets[2]);
-	keys = Object.keys(faceDict);
-	
-		textSize(25);
-	fill(50);
-	text("camera 3", 50, cameraOffsets[3]-50);
-	line(0, cameraOffsets[3], width, cameraOffsets[3]);
-	keys = Object.keys(faceDict);
-	
-		textSize(25);
-	fill(50);
-	text("camera 4", 50, cameraOffsets[4]-50);
-	line(0, cameraOffsets[4], width, cameraOffsets[4]);
+	// stroke(0);
+	// textSize(25);
+	// fill(50);
+	// text("camera 0", 50, cameraOffsets[0]-50);
+	// line(0, cameraOffsets[0], width, cameraOffsets[0]);
+	// keys = Object.keys(faceDict);
+	//
+	// textSize(25);
+	// fill(50);
+	// text("camera 1", 50, cameraOffsets[1]-50);
+	// line(0, cameraOffsets[1], width, cameraOffsets[1]);
+	// keys = Object.keys(faceDict);
+	//
+	// textSize(25);
+	// fill(50);
+	// text("camera 2", 50, cameraOffsets[2]-50);
+	// line(0, cameraOffsets[2], width, cameraOffsets[2]);
+	// keys = Object.keys(faceDict);
+	//
+	// 	textSize(25);
+	// fill(50);
+	// text("camera 3", 50, cameraOffsets[3]-50);
+	// line(0, cameraOffsets[3], width, cameraOffsets[3]);
+	// keys = Object.keys(faceDict);
+	//
+	// 	textSize(25);
+	// fill(50);
+	// text("camera 4", 50, cameraOffsets[4]-50);
+	// line(0, cameraOffsets[4], width, cameraOffsets[4]);
 	keys = Object.keys(faceDict);
 
 	for(var i = 0; i < keys.length;i++){
@@ -65,62 +65,63 @@ function draw() {
 		 var faceData = faceDict[keys[i]];
 		 x = faceData[0]+400;
 		 y = 10*(faceData[1])+50+cameraOffsets[faceData[2]];
-		
-	
-	
-	// HEEL OF THE  LEFT FOOT
-		stroke(139,69,19);
-		fill(160,82,45);
-		arc(x, y-40, 14, 24, 0, PI);
-		line(x-7, y-40, x+7, y-40);
 
-		// LEFT FOOT
-		stroke(139,69,19);
-		fill(160,82,45);
-		bezier(x-7, y-45, x-20, y-90, x+35, y-90, x+7, y-45);
-		// arc(x, y-45, 22, 65, PI, 0);
-		line(x-7, y-45, x+7, y-45);
 
-		// HEEL OF THE RIGHT FOOT
-		stroke(139,69,19);
-		fill(160,82,45);
-		arc(x+35, y-50, 14, 24, 0, PI);
-		line(x+28, y-50, x+42, y-50);
 
-		// RIGHT FOOT
-		stroke(139,69,19);
-		fill(160,82,45);
-		bezier(x+28, y-55, x, y-100, x+55, y-100, x+42, y-55);
-		// arc(x, y-45, 22, 65, PI, 0);
-		line(x+28, y-55, x+42, y-55);
+		 // HEEL OF THE  LEFT FOOT
+	   stroke(139,69,19);
+	   fill(160,82,45);
+	   arc(x, y-40, 12, 22, 0, PI);
+	 	line(x-7, y-40, x+5, y-40);
+
+	 	// LEFT FOOT
+	   stroke(139,69,19);
+	   fill(160,82,45);
+	 	bezier(x-7, y-45, x-20, y-80, x+25, y-80, x+5, y-45);
+	 	// arc(x, y-45, 22, 65, PI, 0);
+	 	line(x-7, y-45, x+5, y-45);
+
+	 	// HEEL OF THE RIGHT FOOT
+	   stroke(139,69,19);
+	   fill(160,82,45);
+	   arc(x+35, y-50, 12, 22, 0, PI);
+	 	line(x+28, y-50, x+40, y-50);
+
+	 	// RIGHT FOOT
+	   stroke(139,69,19);
+	   fill(160,82,45);
+	 	bezier(x+28, y-55, x+5, y-90, x+50, y-90, x+40, y-55);
+	 	// arc(x, y-45, 22, 65, PI, 0);
+	 	line(x+28, y-55, x+40, y-55);
 
 
 
 		// HEEL OF THE  LEFT FOOT
 		stroke(139,69,19);
 		fill(160,82,45);
-		arc(x, y-120, 14, 24, 0, PI);
-		line(x-7, y-120, x+7, y-120);
+		arc(x, y-120, 12, 22, 0, PI);
+		line(x-7, y-120, x+5, y-120);
 
 		// LEFT FOOT
 		stroke(139,69,19);
 		fill(160,82,45);
-		bezier(x-7, y-125, x-20, y-170, x+35, y-170, x+7, y-125);
+		bezier(x-7, y-125, x-20, y-160, x+25, y-160, x+5, y-125);
 		// arc(x, y-45, 22, 65, PI, 0);
-		line(x-7, y-125, x+7, y-125);
+		line(x-7, y-125, x+5, y-125);
 
 		// HEEL OF THE RIGHT FOOT
 		stroke(139,69,19);
 		fill(160,82,45);
-		arc(x+35, y-130, 14, 24, 0, PI);
-		line(x+28, y-130, x+42, y-130);
+		arc(x+35, y-130, 12, 22, 0, PI);
+		line(x+28, y-130, x+40, y-130);
 
 		// RIGHT FOOT
 		stroke(139,69,19);
 		fill(160,82,45);
-		bezier(x+28, y-135, x, y-180, x+55, y-180, x+42, y-135);
+		bezier(x+28, y-135, x+5, y-170, x+50, y-170, x+40, y-135);
 		// arc(x, y-45, 22, 65, PI, 0);
-		line(x+28, y-135, x+42, y-135);
+		line(x+28, y-135, x+40, y-135);
+
 
 
 		textSize(25);
@@ -171,7 +172,7 @@ $('document').ready(function(){
 		} else {
 			topic = arr[0];
 			i = 1;
-			
+
 		}
 		return topic;
 	}
@@ -194,9 +195,9 @@ console.log("Supriya");
 			 y = position[1]+350;
 			//redraw();
 		}
-		
+
 	}
-	
+
 	setInterval(function(){ document.getElementById('topic').innerHTML = getTopic(); }, 1250);
 
 	//var osc = new OSC();
@@ -211,12 +212,13 @@ console.log("Supriya");
 		console.log("Hello world!");
 	});
 
-	
-	
+
+
+
 	/*
 	function draw() {
 		background(200);
-		
+
 		keys = Object.keys(faceDict);
 
 		for(var i = 0; i < keys.length;i++){
@@ -227,9 +229,9 @@ console.log("Supriya");
 			 var position = faceDict[keys[i]];
 			 x = position[0]+180;
 			 y = position[1]+350;
-		
-		
-		
+
+
+
 		// HEEL OF THE  LEFT FOOT
 			stroke(139,69,19);
 			fill(160,82,45);
@@ -301,5 +303,5 @@ console.log("Supriya");
 		}
 	}
 	*/
-	
+
 });
