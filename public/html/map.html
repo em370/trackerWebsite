@@ -11,6 +11,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.sound.min.js"></script>
+		<script src="js/nav.js"></script>
 		<script src="js/home.js"></script>
 		<link rel="stylesheet" type="text/css" href="/css/home.css"/>
 		<link rel="stylesheet" type="text/css" href="/css/octocat.css"/>
@@ -26,7 +27,19 @@
 				<!--<a href ="signin" class="ui huge green button"> Yes </a>
 				<a href ="signup" class="ui huge green button"> No </a>-->
 	    </div>
-			<div id="sketchContainer"></div>
+			<div class="ui center aligned segment">
+				<div class="dropdown">
+				  <button class="dropbtn">Cameras</button>
+				  <div class="dropdown-content">
+				  <a href="#">Cam 1</a>
+				  <a href="#">Cam 2</a>
+				  <a href="#">All</a>
+				 </div>
+</div>
+			</div>
+			<div id="sketchContainer">
+				<button id="exitButton" style="fill:#FFF; color:black; position: absolute; top: 0; border: 0;">Mischief Managed</button>
+			</div>
 		</div>
 	</body>
 
