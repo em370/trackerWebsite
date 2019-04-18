@@ -4,7 +4,7 @@
 	faceDict = {};
 	cameraOffsets = [100, 1100, 2100, 3100, 4100];
 function setup() {
-	var cnv = createCanvas(windowWidth, windowHeight);
+	var cnv = createCanvas(windowWidth, windowHeight-40);
   cnv.style('display', 'block');
 	// Starts in the middle
 	// x = width / 2;
