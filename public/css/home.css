@@ -1,6 +1,5 @@
 .segment
 {
-	background-color: #e3d29d;
 	height: 90vh;
 }
 .ui.header.blue
@@ -27,11 +26,42 @@
 	margin-bottom: 2em;
 }
 
-body
+.mainDiv
 {
 	background-color: #e3d29d;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
 	opacity: 0.95;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #654321;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color: black;
 }
