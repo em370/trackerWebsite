@@ -10,10 +10,6 @@
 }
 .ui.header.green
 {
-	olor: #e3d29d;
-  /* opacity:0.9; */
-  font-family: "Trattatello", fantasy;
-  font-style: italic;
 	margin-top: 0em;
 	font-size: 4em;
 	font-family: 'Happy Monkey', cursive;
@@ -79,4 +75,13 @@
 .container .btn:hover {
   background-color: #3c1414;
   opacity: 0.85;
+}
+
+.banner{
+	color: #e3d29d;
+  /* opacity:0.9; */
+  font-family: "Trattatello", fantasy;
+  font-style: italic;
+	font-size: 4em;
+	/* font-family: 'Happy Monkey', cursive; */
 }
