@@ -77,6 +77,42 @@
   opacity: 0.85;
 }
 
+.eButton{
+	position: absolute;
+	top: 0;
+	border: 0;
+	background-color: #3c1414;
+  opacity: 1;
+  color: #e3d29d;
+  opacity:0.9;
+  font-family: "Trattatello", fantasy;
+  font-style: italic;
+  font-size: 50px;
+  padding: 20px 28px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.mButton{
+	position: absolute;
+	left: 0;
+	bottom: 0
+	border: 0;
+	background-color: #3c1414;
+  opacity: 1;
+  color: #e3d29d;
+  opacity:0.9;
+  font-family: "Trattatello", fantasy;
+  font-style: italic;
+  font-size: 50px;
+  padding: 20px 28px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
 .banner{
 	color: #e3d29d;
   /* opacity:0.9; */
