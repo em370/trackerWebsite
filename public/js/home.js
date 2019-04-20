@@ -1,10 +1,11 @@
 
 // faceDict format: {name} =  [lateral position, depth, camera, lastDetection, numDetections, direction]
+// exaple data : 0.06347981326021644, 2.889216054773962, 1, "2019-04-20T20:58:09.317Z", 549, -0.07024950239272891
 	var x, y, name, faceDict, cameraOffsets;
 	faceDict = {};
 	cameraOffsets = [100, 1100, 2100, 3100, 4100];
 function setup() {
-	var cnv = createCanvas(windowWidth, windowHeight-100);
+	var cnv = createCanvas(windowWidth, windowHeight-130);
   cnv.style('display', 'block');
 	// Starts in the middle
 	// x = width / 2;
@@ -63,10 +64,11 @@ function draw() {
 		 name = keys[i];
 		 console.log("name:"+keys[i]);
 		 var faceData = faceDict[keys[i]];
-		 x = faceData[0]+400;
-		 y = 10*(faceData[1])+150+faceData[2];
-
-
+		 x = faceData[0];
+		 y = 10*(faceData[1]);
+		 angleMode(RADIANS);
+		 translate(200,250);
+		 rotate(PI + faceData[5] / 3.0);
 
 		 // HEEL OF THE  LEFT FOOT
 	   stroke(139,69,19);
