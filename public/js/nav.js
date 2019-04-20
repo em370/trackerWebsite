@@ -2,9 +2,6 @@ window.onload = function(){
     document.getElementById("enterButton").onclick = function () {
         window.location.href = "/map";
     }
-    document.getElementById("exitButton").onclick = function () {
-        window.location.href = "/";
-    }
     document.getElementById("musicButton").onclick = function () {
         var music = document.getElementById("musicButton");
         var play = 1;
