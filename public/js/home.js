@@ -35,7 +35,7 @@ function draw() {
 	
 
 strokeWeight(0.127*scale);
-	
+	//stroke(0);
 	line(startX, startY,startX,startY+ 4.013*scale);
 	
 	line(startX, startY,startX+ 4.24*scale,startY);
@@ -60,7 +60,7 @@ strokeWeight(0.127*scale);
 	
 	line(startX+ 4.24*scale,startY+ (4.013+0.660)*scale,startX+ (4.24+5.37)*scale,startY+ (4.013+0.660)*scale);
 	
-	
+	strokeWeight(1);
 	// stroke(0);
 	// textSize(25);
 	// fill(50);
@@ -98,39 +98,46 @@ strokeWeight(0.127*scale);
 		 name = keys[i];
 		 console.log("name:"+keys[i]);
 		 var faceData = faceDict[keys[i]];
-		 x = faceData[0];
-		 y = 10*(faceData[1]);
+		 x = scale*faceData[0]+startX;
+		 y = scale*(faceData[1]) +startY;
+		 console.log(x);
+		 console.log(y);
 		 angleMode(RADIANS);
-		 translate(200,250);
+		 
+		 
+		 translate(x,y);
 		 rotate(PI + faceData[5] / 3.0);
+		 
+		 
+		 line(x,y,x+100,y);
 
 		 // HEEL OF THE  LEFT FOOT
 	   stroke(139,69,19);
 	   fill(160,82,45);
-	   arc(x, y-40, 12, 22, 0, PI);
-	 	line(x-7, y-40, x+5, y-40);
+	   arc(0, -40, 12, 22, 0, PI);
+	 	line(-7, -40, 5, -40);
 
 	 	// LEFT FOOT
 	   stroke(139,69,19);
 	   fill(160,82,45);
-	 	bezier(x-7, y-45, x-20, y-80, x+25, y-80, x+5, y-45);
+	 	bezier(-7, -45, -20, -80, +25, -80, 5, -45);
 	 	// arc(x, y-45, 22, 65, PI, 0);
-	 	line(x-7, y-45, x+5, y-45);
+	 	line(-7, -45, 5, -45);
 
 	 	// HEEL OF THE RIGHT FOOT
 	   stroke(139,69,19);
 	   fill(160,82,45);
-	   arc(x+35, y-50, 12, 22, 0, PI);
-	 	line(x+28, y-50, x+40, y-50);
+	   arc(35, -50, 12, 22, 0, PI);
+	 	line(28, -50, 40, -50);
 
 	 	// RIGHT FOOT
 	   stroke(139,69,19);
 	   fill(160,82,45);
-	 	bezier(x+28, y-55, x+5, y-90, x+50, y-90, x+40, y-55);
+	 	bezier(28, -55, 5, -90, 50, -90, 40, -55);
 	 	// arc(x, y-45, 22, 65, PI, 0);
-	 	line(x+28, y-55, x+40, y-55);
+	 	line(28, -55, 40, -55);
 
-
+/*
 
 		// HEEL OF THE  LEFT FOOT
 		stroke(139,69,19);
@@ -158,11 +165,11 @@ strokeWeight(0.127*scale);
 		// arc(x, y-45, 22, 65, PI, 0);
 		line(x+28, y-135, x+40, y-135);
 
-
+*/
 
 		textSize(25);
 		fill(50);
-		text(name, x+55, y-100);
+		text(name, 35, -100);
 
 //   // Jiggling randomly on the horizontal axis
 //   x = x + random(-1, 1);
@@ -198,7 +205,7 @@ $('document').ready(function(){
 	ws.onmessage = function (event) {
 		//console.log(event.data);
 		faceDict = JSON.parse(event.data);
-		console.log(faceDict);
+		//console.log(faceDict);
 		redraw();
 	};
 	function getTopic() {
@@ -226,7 +233,7 @@ $('document').ready(function(){
 			 for(var j=0;i<position.length;i++){
 				 console.log(position[i]);
 			 }
-console.log("Supriya");
+//console.log("Supriya");
 			 x = position[0]+200;
 			 y = position[1]+350;
 			//redraw();
