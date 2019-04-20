@@ -15,7 +15,7 @@ var prevDict = {};
 var start = new Date();
 
 var changeThresh = 100; //max distance for a detection to change face location
-var directionThresh = 2; // min distance needed to change feet direction
+var directionThresh = 0.2; // min distance needed to change feet direction
 var dropTime = 1000; // in ms
 var detectionsNeeded = 30; //number of connected detections before face is accepted
 
@@ -61,6 +61,7 @@ wss.on('connection', function connection(ws) {
 		oldFace = faceDict[jData[0]];
 		var delX = oldFace[0]-newFace[0];
 		var delY = oldFace[0]-newFace[0];
+		var faceDir = Math.atan2(delY,delX);
 
 		var dist = Math.sqrt( Math.pow(delX,2) + Math.pow(delY,2) );
 		if(oldFace[2] == newFace[2] &&dist<changeThresh){
@@ -68,7 +69,7 @@ wss.on('connection', function connection(ws) {
 			//if (dist >directionThresh){
 				faceDict[jData[0]] = [jData[1],jData[2],jData[3],new Date(),oldFace[4]+1,oldFace[5]];
 			//}else{
-			//	faceDict[jData[0]] = [jData[1],jData[2],jData[3],new Date(),oldFace[4]+1,oldFace[5]];
+				faceDict[jData[0]] = [jData[1],jData[2],jData[3],new Date(),oldFace[4]+1,oldFace[5]];
 			//}
 		}
 		//faceDict[jData[0]] = [jData[1],jData[2]];
@@ -105,8 +106,10 @@ setInterval(() => {
 
 			var delX = lateral-prevLateral;
 			var delY = depth-prevDepth;
-
-			currFace[5] = Math.atan2(delY,delX);
+			var dist = Math.sqrt( Math.pow(delX,2) + Math.pow(delY,2) );
+			if (dist >directionThresh){
+				currFace[5] = Math.atan2(delY,delX);
+			}
 			//console.log(currFace[5]);
 		}
 

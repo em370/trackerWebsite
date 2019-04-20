@@ -100,13 +100,13 @@ strokeWeight(0.127*scale);
 		 var faceData = faceDict[keys[i]];
 		 x = scale*faceData[0]+startX;
 		 y = scale*(faceData[1]) +startY;
-		 console.log(x);
-		 console.log(y);
+		 //console.log(x);
+		 //console.log(y);
 		 angleMode(RADIANS);
-		 
+		 console.log(faceData[5]);
 		 
 		 translate(x,y);
-		 rotate(PI + faceData[5] / 3.0);
+		 rotate(faceData[5]);
 		 
 		 
 		 line(x,y,x+100,y);
