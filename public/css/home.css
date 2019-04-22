@@ -2,6 +2,10 @@
 {
 	height: 90vh;
 } */
+@font-face {
+  font-family: 'myFont';
+  src: URL('../assets/SketchGothicSchool.ttf') format('truetype');
+}
 .ui.header.blue
 {
 	margin-top: 1.60em;
@@ -104,8 +108,8 @@
   opacity: 1;
   color: #e3d29d;
   opacity:0.9;
-  font-family: "Trattatello", fantasy;
-  font-style: italic;
+  font-family: "myFont";
+  /* font-style: italic; */
   font-size: 50px;
   padding: 20px 28px;
   border: none;

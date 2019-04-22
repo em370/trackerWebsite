@@ -151,7 +151,8 @@ strokeWeight(0.127*scale);
 	 	// line(28, -55, 40, -55);
 
 		textFont(myFont);
-		textSize(25);
+		textSize(30);
+		stroke(50);
 		fill(220,220,220);
 		textAlign(CENTER, CENTER);
 		text(name, 0, 40);
