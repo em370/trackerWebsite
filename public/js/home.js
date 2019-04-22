@@ -7,7 +7,7 @@
 function setup() {
 	var cnv = createCanvas(windowWidth, windowHeight-130);
   cnv.style('display', 'block');
-  
+
     scale = 100;
 	startX = windowWidth/6;
 	startY = 20;
@@ -31,35 +31,35 @@ function setup() {
 
 function draw() {
 	background(200);
-	
-	
+
+
 
 strokeWeight(0.127*scale);
 	//stroke(0);
 	line(startX, startY,startX,startY+ 4.013*scale);
-	
+
 	line(startX, startY,startX+ 4.24*scale,startY);
-	
+
 	line(startX, startY+ 4.013*scale,startX+ 4.24*scale,startY+ 4.013*scale);
-	
+
 	line(startX+ 4.24*scale, startY,startX+ 4.24*scale,startY+ (3)*scale);
-	
+
 	line(startX+ 4.24*scale,startY+ 2.769*scale,startX+ (4.24+1.651)*scale,startY+ 2.769*scale);
-	
+
 	line(startX+ (4.24+1.651)*scale,startY+ 2.769*scale,startX+ (4.24+1.651)*scale,startY+ (2.769+0.406)*scale);
-	
+
 	line(startX+ (4.24+1.651)*scale,startY+ (2.769+0.406)*scale,startX+ (4.24+1.651+1.805)*scale,startY+ (2.769+0.406)*scale);
-	
+
 	line(startX+ (4.24+1.651+1.805+0.914)*scale,startY+ (2.769+0.406)*scale,startX+ (4.24+1.651+1.805+0.914)*scale,startY+ (2.769+0.406-3.175)*scale);
-	
+
 	line(startX+ (4.24+1.651+1.805+0.914)*scale,startY+ (2.769+0.406-3.175)*scale,startX+ (4.24+1.651+1.805+0.914-4.37)*scale,startY+ (2.769+0.406-3.175)*scale);
-	
+
 	line(startX+ (4.24+1.651+1.805+0.914)*scale,startY+ (2.769+0.406)*scale,startX+ (4.24+1.651+1.805+0.914+1)*scale,startY+ (2.769+0.406)*scale);
-	
+
 	line(startX+ 4.24*scale,startY+ (4.013-0.1)*scale,startX+ 4.24*scale,startY+ (4.013+0.660)*scale);
-	
+
 	line(startX+ 4.24*scale,startY+ (4.013+0.660)*scale,startX+ (4.24+5.37)*scale,startY+ (4.013+0.660)*scale);
-	
+
 	strokeWeight(1);
 	// stroke(0);
 	// textSize(25);
@@ -104,38 +104,46 @@ strokeWeight(0.127*scale);
 		 //console.log(y);
 		 angleMode(RADIANS);
 		 console.log(faceData[5]);
-		 
+
 		 translate(x,y);
 		 rotate(faceData[5]);
-		 
-		 
+
+
 		 line(x,y,x+100,y);
 
 		 // HEEL OF THE  LEFT FOOT
 	   stroke(139,69,19);
 	   fill(160,82,45);
-	   arc(0, -40, 12, 22, 0, PI);
-	 	line(-7, -40, 5, -40);
+		 arc(-15, 13, 10, 18, 0, PI);
+ 	 	 line(-20, 13, -10, 13);
+	  //  arc(0, -40, 12, 22, 0, PI);
+	 	// line(-7, -40, 5, -40);
 
 	 	// LEFT FOOT
 	   stroke(139,69,19);
 	   fill(160,82,45);
-	 	bezier(-7, -45, -20, -80, +25, -80, 5, -45);
-	 	// arc(x, y-45, 22, 65, PI, 0);
-	 	line(-7, -45, 5, -45);
+		 bezier(-20, 9, -35, -22, 10, -22, -10, 9);
+     line(-20, 9, -10, 9);
+	 	// bezier(-7, -45, -20, -80, +25, -80, 5, -45);
+	 	// // arc(x, y-45, 22, 65, PI, 0);
+	 	// line(-7, -45, 5, -45);
 
 	 	// HEEL OF THE RIGHT FOOT
 	   stroke(139,69,19);
 	   fill(160,82,45);
-	   arc(35, -50, 12, 22, 0, PI);
-	 	line(28, -50, 40, -50);
+		 arc(15, 3, 10, 18, 0, PI);
+ 	   line(10, 3, 20, 3);
+	  //  arc(35, -50, 12, 22, 0, PI);
+	 	// line(28, -50, 40, -50);
 
 	 	// RIGHT FOOT
 	   stroke(139,69,19);
 	   fill(160,82,45);
-	 	bezier(28, -55, 5, -90, 50, -90, 40, -55);
-	 	// arc(x, y-45, 22, 65, PI, 0);
-	 	line(28, -55, 40, -55);
+		 bezier(10, -2, -10, -32, 35, -32, 20, -2);
+     line(10, -2, 20, -2);
+	 	// bezier(28, -55, 5, -90, 50, -90, 40, -55);
+	 	// // arc(x, y-45, 22, 65, PI, 0);
+	 	// line(28, -55, 40, -55);
 
 /*
 
