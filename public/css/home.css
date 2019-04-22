@@ -66,7 +66,7 @@
   opacity: 1;
   color: #e3d29d;
   opacity:0.9;
-  font-family: "Trattatello", fantasy;
+  font-family: "myFont";
   font-style: italic;
   font-size: 50px;
   padding: 20px 28px;
@@ -89,7 +89,7 @@
   opacity: 1;
   color: #e3d29d;
   opacity:0.9;
-  font-family: "Trattatello", fantasy;
+  font-family: "myFont";
   font-style: italic;
   font-size: 50px;
   padding: 20px 28px;
@@ -120,7 +120,7 @@
 .banner{
 	color: #e3d29d;
   /* opacity:0.9; */
-  font-family: "Trattatello", fantasy;
+  font-family: "myFont";
   font-style: italic;
 	font-size: 4em;
 	/* font-family: 'Happy Monkey', cursive; */
