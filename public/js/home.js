@@ -111,7 +111,7 @@ strokeWeight(0.127*scale);
 		 console.log(faceData[5]);
 
 		 translate(x,y);
-		 rotate(faceData[5]);
+		 rotate(faceData[5] -PI/2);
 
 
 		 // line(x,y,x+100,y);
@@ -156,7 +156,7 @@ strokeWeight(0.127*scale);
 		fill(220,220,220);
 		textAlign(CENTER, CENTER);
 		text(name, 0, 40);
-translate(-x,-y);
+		translate(-x,-y);
 
 /*
 
