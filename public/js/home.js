@@ -157,6 +157,7 @@ strokeWeight(0.127*scale);
 		textAlign(CENTER, CENTER);
 		text(name, 0, 40);
 		translate(-x,-y);
+		rotate(-(faceData[5] +PI/2));
 
 /*
 
