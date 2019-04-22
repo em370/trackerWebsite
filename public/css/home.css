@@ -67,7 +67,6 @@
   color: #e3d29d;
   opacity:0.9;
   font-family: "myFont";
-  font-style: italic;
   font-size: 50px;
   padding: 20px 28px;
   border: none;
@@ -81,22 +80,29 @@
   opacity: 0.85;
 }
 
+.sketchContainer{
+	display:table;
+}
+
+.sketchC{
+	display: table-cell;
+  text-align: center;
+  vertical-align: bottom;
+}
 .eButton{
-	position: absolute;
+	/* position: absolute;
 	top: 0;
-	border: 0;
+	border: 0; */
 	background-color: #3c1414;
   opacity: 1;
   color: #e3d29d;
   opacity:0.9;
   font-family: "myFont";
-  font-style: italic;
   font-size: 50px;
   padding: 20px 28px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  text-align: center;
 }
 
 .mButton{
@@ -118,11 +124,10 @@
   text-align: center;
 }
 .banner{
-	color: #e3d29d;
+	color: #3c1414;
   /* opacity:0.9; */
   font-family: "myFont";
-  font-style: italic;
-	font-size: 4em;
+	font-size: 55px;
 	/* font-family: 'Happy Monkey', cursive; */
 }
 
