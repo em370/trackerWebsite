@@ -4,6 +4,11 @@
 	var x, y, name, faceDict, cameraOffsets;
 	faceDict = {};
 	cameraOffsets = [100, 1100, 2100, 3100, 4100];
+
+	var myFont;
+	function preload() {
+	  myFont = loadFont('../assets/SketchGothicSchool.ttf');
+	}
 function setup() {
 	var cnv = createCanvas(windowWidth, windowHeight-130);
   cnv.style('display', 'block');
@@ -109,7 +114,7 @@ strokeWeight(0.127*scale);
 		 rotate(faceData[5]);
 
 
-		 line(x,y,x+100,y);
+		 // line(x,y,x+100,y);
 
 		 // HEEL OF THE  LEFT FOOT
 	   stroke(139,69,19);
@@ -145,6 +150,12 @@ strokeWeight(0.127*scale);
 	 	// // arc(x, y-45, 22, 65, PI, 0);
 	 	// line(28, -55, 40, -55);
 
+		textFont(myFont);
+		textSize(25);
+		fill(50);
+		text(name, 15, 13);
+
+
 /*
 
 		// HEEL OF THE  LEFT FOOT
@@ -174,10 +185,6 @@ strokeWeight(0.127*scale);
 		line(x+28, y-135, x+40, y-135);
 
 */
-
-		textSize(25);
-		fill(50);
-		text(name, 35, -100);
 
 //   // Jiggling randomly on the horizontal axis
 //   x = x + random(-1, 1);
