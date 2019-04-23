@@ -111,6 +111,13 @@ strokeWeight(0.127*scale);
 		 console.log(faceData[5]);
 
 		 translate(x,y);
+		 
+		textFont(myFont);
+		textSize(30);
+		stroke(50);
+		fill(220,220,220);
+		textAlign(CENTER, CENTER);
+		text(name, 0, 40);
 		 rotate(faceData[5] +PI/2);
 
 
@@ -150,12 +157,6 @@ strokeWeight(0.127*scale);
 	 	// // arc(x, y-45, 22, 65, PI, 0);
 	 	// line(28, -55, 40, -55);
 
-		textFont(myFont);
-		textSize(30);
-		stroke(50);
-		fill(220,220,220);
-		textAlign(CENTER, CENTER);
-		text(name, 0, 40);
 		rotate(-(faceData[5] +PI/2));
 		translate(-x,-y);
 		//
