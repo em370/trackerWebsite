@@ -12,7 +12,7 @@
 		img2 = loadImage('../assets/cam2.png');
 	}
 function setup() {
-	var cnv = createCanvas(windowWidth, windowHeight-200);
+	var cnv = createCanvas(windowWidth, windowHeight-250);
   cnv.style('display', 'block');
   cnv.parent('sketchContainer');
     scale = 100;
@@ -37,8 +37,9 @@ function setup() {
 //   $('#sketchContainer').append(node);
 
 function draw() {
-	//background(227, 210, 157); -->yellow
-	background(200);
+	// -->yellow
+	background(227, 210, 157);
+	// background(200);
 
 
 
