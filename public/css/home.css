@@ -1,6 +1,7 @@
-.segment
+.segmentButton
 {
-	height: 90vh;
+	height: 0vh;
+  align-content: center;
 }
 @font-face {
   font-family: 'HPTitle';
