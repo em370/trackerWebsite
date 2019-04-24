@@ -12,7 +12,7 @@
 		img2 = loadImage('../assets/cam1.png');
 	}
 function setup() {
-	var cnv = createCanvas(windowWidth, windowHeight-280);
+	var cnv = createCanvas(windowWidth, windowHeight-200);
   cnv.style('display', 'block');
   cnv.parent('sketchContainer');
     scale = 100;
@@ -45,7 +45,9 @@ function draw() {
 strokeWeight(0.127*scale);
 	stroke(0);
 	line(startX, startY,startX,startY+ 4.013*scale);
-	image(img1,startX+0.15,startY+ 4.013*scale, 30, 30);
+
+	image(img1,startX+0.18,startY+ 4*scale, 30, 30);
+
 	line(startX, startY,startX+ 4.24*scale,startY);
 
 	line(startX, startY+ 4.013*scale,startX+ 4.24*scale,startY+ 4.013*scale);
@@ -53,7 +55,9 @@ strokeWeight(0.127*scale);
 	line(startX+ 4.24*scale, startY,startX+ 4.24*scale,startY+ (3)*scale);
 
 	line(startX+ 4.24*scale,startY+ 2.769*scale,startX+ (4.24+1.651)*scale,startY+ 2.769*scale);
-	image(img2,startX+ 4*scale,startY+ 0.15, 30, 30);
+
+	image(img2,startX+ 3*scale,startY+ 0.15, 30, 30);
+
 	line(startX+ (4.24+1.651)*scale,startY+ 2.769*scale,startX+ (4.24+1.651)*scale,startY+ (2.769+0.406)*scale);
 
 	line(startX+ (4.24+1.651)*scale,startY+ (2.769+0.406)*scale,startX+ (4.24+1.651+1.805)*scale,startY+ (2.769+0.406)*scale);
@@ -63,7 +67,9 @@ strokeWeight(0.127*scale);
 	line(startX+ (4.24+1.651+1.805+0.914)*scale,startY+ (2.769+0.406-3.175)*scale,startX+ (4.24+1.651+1.805+0.914-4.37)*scale,startY+ (2.769+0.406-3.175)*scale);
 
 	line(startX+ (4.24+1.651+1.805+0.914)*scale,startY+ (2.769+0.406)*scale,startX+ (4.24+1.651+1.805+0.914+1)*scale,startY+ (2.769+0.406)*scale);
-	image(img1,startX+0.15+(4.24+1.651)*scale,startY+ 4.013*scale, 30, 30);
+
+	image(img1,startX+0.15+(4.24)*scale,startY+ 2.769*scale, 30, 30);
+
 	line(startX+ 4.24*scale,startY+ (4.013-0.1)*scale,startX+ 4.24*scale,startY+ (4.013+0.660)*scale);
 
 	line(startX+ 4.24*scale,startY+ (4.013+0.660)*scale,startX+ (4.24+5.37)*scale,startY+ (4.013+0.660)*scale);
