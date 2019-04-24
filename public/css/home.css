@@ -1,7 +1,7 @@
-/* .segment
+.segment
 {
 	height: 90vh;
-} */
+}
 @font-face {
   font-family: 'HPTitle';
   src: URL('../assets/HPTitle.TTF') format('truetype');
@@ -88,9 +88,9 @@
   opacity: 0.85;
 }
 
-.sketchContainer{
+/* .sketchContainer{
 	display:table;
-}
+} */
 
 .sketchC{
 	display: table-cell;
@@ -116,16 +116,15 @@
 .mButton{
 	position: absolute;
 	left: 0;
-	bottom: 0
+	bottom: 0;
 	border: 0;
-	/* background-color: #3c1414; */
-  /* opacity: 1; */
+	background-color: #480607;
+  opacity: 0.95;
   color: #e3d29d;
   opacity:0.9;
-  font-family: "myFont";
+  font-family: "HPTitle";
   /* font-style: italic; */
   font-size: 50px;
-  padding: 20px 28px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
