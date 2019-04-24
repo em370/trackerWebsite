@@ -1,7 +1,9 @@
 .segmentButton
 {
-	height: 0vh;
-  align-content: center;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @font-face {
   font-family: 'HPTitle';
@@ -99,19 +101,21 @@
   vertical-align: bottom;
 }
 .eButton{
-	/* position: absolute;
+  display:block;
+	position: absolute;
 	top: 0;
-	border: 0; */
-	background-color: #3c1414;
+	border: 0;
+	background-color: white;
+  border: 2px solid #3c1414;
   opacity: 1;
   color: #e3d29d;
-  opacity:0.9;
+  opacity:1.5;
   font-family: "map1";
   font-size: 50px;
   padding: 20px 28px;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 .mButton{
