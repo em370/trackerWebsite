@@ -35,7 +35,8 @@ function setup() {
 //   $('#sketchContainer').append(node);
 
 function draw() {
-	background(227, 210, 157);
+	//background(227, 210, 157); -->yellow
+	background(200);
 
 
 
@@ -114,8 +115,10 @@ strokeWeight(0.127*scale);
 
 		textFont(myFont);
 		textSize(30);
-		stroke(50);
-		fill(220,220,220);
+		// stroke(50);
+		// fill(220,220,220);
+		stroke(139,69,19);
+		fill(160,82,45);
 		textAlign(CENTER, CENTER);
 		text(name, 0, 40);
 		 rotate(faceData[5] +PI/2);
