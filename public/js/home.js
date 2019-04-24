@@ -12,10 +12,7 @@
 function setup() {
 	var cnv = createCanvas(windowWidth, windowHeight-130);
   cnv.style('display', 'block');
-	var node = document.getElementById('#sketchC');
-	node.appendChild(cnv);
-	//   new p5(sketch, node);
-	//   $('#sketchContainer').append(node);
+
     scale = 100;
 	startX = windowWidth/6;
 	startY = 20;
