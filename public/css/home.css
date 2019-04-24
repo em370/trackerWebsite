@@ -3,16 +3,8 @@
 	height: 90vh;
 } */
 @font-face {
-  font-family: 'HPTitle';
-  src: URL('../assets/HPTitle.TTF') format('truetype');
-}
-@font-face {
-  font-family: 'mapCaps';
-  src: URL('../assets/map.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'map1';
-  src: URL('../assets/map1.otf') format('truetype');
+  font-family: 'myFont';
+  src: URL('../assets/SketchGothicSchool.ttf') format('truetype');
 }
 .ui.header.blue
 {
@@ -74,7 +66,7 @@
   opacity: 1;
   color: #e3d29d;
   opacity:0.9;
-  font-family: "mapCaps";
+  font-family: "myFont";
   font-size: 50px;
   padding: 20px 28px;
   border: none;
@@ -105,7 +97,7 @@
   opacity: 1;
   color: #e3d29d;
   opacity:0.9;
-  font-family: "map1";
+  font-family: "myFont";
   font-size: 50px;
   padding: 20px 28px;
   border: none;
@@ -134,7 +126,7 @@
 .banner{
 	color: #3c1414;
   /* opacity:0.9; */
-  font-family: "HPTitle";
+  font-family: "myFont";
 	font-size: 55px;
 	/* font-family: 'Happy Monkey', cursive; */
 }

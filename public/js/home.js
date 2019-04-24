@@ -7,12 +7,15 @@
 
 	var myFont;
 	function preload() {
-	  myFont = loadFont('../assets/SketchGothicSchool.ttf');
+	  myFont = loadFont('../assets/map1.otf');
 	}
 function setup() {
 	var cnv = createCanvas(windowWidth, windowHeight-130);
   cnv.style('display', 'block');
-
+	var node = document.getElementById('#sketchC');
+	node.appendChild(cnv);
+	//   new p5(sketch, node);
+	//   $('#sketchContainer').append(node);
     scale = 100;
 	startX = windowWidth/6;
 	startY = 20;
@@ -40,7 +43,7 @@ function draw() {
 
 
 strokeWeight(0.127*scale);
-	//stroke(0);
+	stroke(0);
 	line(startX, startY,startX,startY+ 4.013*scale);
 
 	line(startX, startY,startX+ 4.24*scale,startY);
@@ -111,7 +114,7 @@ strokeWeight(0.127*scale);
 		 console.log(faceData[5]);
 
 		 translate(x,y);
-		 
+
 		textFont(myFont);
 		textSize(30);
 		stroke(50);
