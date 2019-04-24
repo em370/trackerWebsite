@@ -10,7 +10,7 @@
 	  myFont = loadFont('../assets/map1.otf');
 	}
 function setup() {
-	var cnv = createCanvas(windowWidth, windowHeight-300);
+	var cnv = createCanvas(windowWidth, windowHeight-380);
   cnv.style('display', 'block');
   cnv.parent('sketchContainer');
     scale = 100;
@@ -35,7 +35,7 @@ function setup() {
 //   $('#sketchContainer').append(node);
 
 function draw() {
-	background(200);
+	background(227, 210, 157);
 
 
 
