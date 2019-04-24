@@ -10,7 +10,7 @@
 	  myFont = loadFont('../assets/map1.otf');
 	}
 function setup() {
-	var cnv = createCanvas(windowWidth, windowHeight-300);
+	var cnv = createCanvas(windowWidth, windowHeight-280);
   cnv.style('display', 'block');
   cnv.parent('sketchContainer');
     scale = 100;
