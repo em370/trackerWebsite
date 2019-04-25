@@ -47,7 +47,7 @@ strokeWeight(0.127*scale);
 	stroke(0);
 	line(startX, startY,startX,startY+ 4.013*scale);
 
-	image(img1,startX+.11*scale,startY+ 3.6*scale, 30, 30);
+	image(img1,startX+.11*scale,startY+ 2.6*scale, 30, 30);
 
 	line(startX, startY,startX+ 4.24*scale,startY);
 
@@ -57,7 +57,7 @@ strokeWeight(0.127*scale);
 
 	line(startX+ 4.24*scale,startY+ 2.769*scale,startX+ (4.24+1.651)*scale,startY+ 2.769*scale);
 
-	image(img2,startX+3.5*scale,startY+.18*scale, 25, 25);
+	image(img2,startX+3*scale,startY+.18*scale, 25, 25);
 
 	line(startX+ (4.24+1.651)*scale,startY+ 2.769*scale,startX+ (4.24+1.651)*scale,startY+ (2.769+0.406)*scale);
 
@@ -69,7 +69,7 @@ strokeWeight(0.127*scale);
 
 	line(startX+ (4.24+1.651+1.805+0.914)*scale,startY+ (2.769+0.406)*scale,startX+ (4.24+1.651+1.805+0.914+1)*scale,startY+ (2.769+0.406)*scale);
 
-	image(img1,startX+1+(4.34)*scale,startY+ 2.3*scale, 30, 30);
+	image(img1,startX+1+(4.34)*scale,startY+ 1.75*scale, 30, 30);
 
 	line(startX+ 4.24*scale,startY+ (4.013-0.1)*scale,startX+ 4.24*scale,startY+ (4.013+0.660)*scale);
 
@@ -222,7 +222,8 @@ $('document').ready(function(){
 		$('#appendhere').append('<a class="ui huge green button"> Yes </a>');
 		$('#appendhere').append('<a class="ui huge green button"> No </a>');
 
-		var arr = ["Are", "Watching", "You","We"];
+		// var arr = ["Are", "Watching", "You","We"];
+		var arr = ["Solemnly", "Swear", "I", "Am", "Upto", "No", "Good", "I"];
 
 	var i = 0;
 
