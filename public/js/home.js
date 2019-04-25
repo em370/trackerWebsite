@@ -57,7 +57,7 @@ strokeWeight(0.127*scale);
 
 	line(startX+ 4.24*scale,startY+ 2.769*scale,startX+ (4.24+1.651)*scale,startY+ 2.769*scale);
 
-	image(img2,startX+3*scale,startY+.18*scale, 25, 25);
+	image(img2,startX+3*scale,startY+.18*scale, 30, 30);
 
 	line(startX+ (4.24+1.651)*scale,startY+ 2.769*scale,startX+ (4.24+1.651)*scale,startY+ (2.769+0.406)*scale);
 
