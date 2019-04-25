@@ -47,7 +47,7 @@ strokeWeight(0.127*scale);
 	stroke(0);
 	line(startX, startY,startX,startY+ 4.013*scale);
 
-	image(img1,startX+.0.508*scale,startY+ 2.286*scale, 30, 30);
+	image(img1,startX+0.508*scale,startY+ 2.286*scale, 30, 30);
 
 	line(startX, startY,startX+ 4.24*scale,startY);
 
@@ -57,7 +57,7 @@ strokeWeight(0.127*scale);
 
 	line(startX+ 4.24*scale,startY+ 2.769*scale,startX+ (4.24+1.651)*scale,startY+ 2.769*scale);
 
-	image(img2,startX+2.515*scale,startY+.0.4318*scale, 30, 30);
+	image(img2,startX+2.515*scale,startY+0.4318*scale, 30, 30);
 
 	line(startX+ (4.24+1.651)*scale,startY+ 2.769*scale,startX+ (4.24+1.651)*scale,startY+ (2.769+0.406)*scale);
 
