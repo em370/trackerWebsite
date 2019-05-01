@@ -53,7 +53,7 @@ strokeWeight(0.127*100);
 	line(startX, startY,startX+ 10.16*scale,startY);
  // left-bottom half
 	line(startX, startY+ 6.96*scale,startX+ 10.16*scale,startY+ 6.96*scale);
-	line(startX+10.16*, startY,startX+ 10.16*scale,startY+ 6.96*scale);
+	line(startX+10.16*scale, startY,startX+ 10.16*scale,startY+ 6.96*scale);
 	// right wall
  	//line(startX+ (17.708333+15.625)*scale,startY,startX+ (17.708333+15.625)*scale,startY+ 22.8333*scale);
    // right-top half
