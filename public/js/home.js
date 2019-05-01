@@ -12,7 +12,7 @@
 		img2 = loadImage('../assets/cam2.png');
 	}
 function setup() {
-	var cnv = createCanvas(windowWidth, windowHeight-100);
+	var cnv = createCanvas(windowWidth, windowHeight-150);
   cnv.style('display', 'block');
   cnv.parent('sketchContainer');
     scale = 20;
@@ -60,7 +60,7 @@ strokeWeight(0.127*100);
 	// left-bottom half
  	line(startX+ 14.8333*scale, startY+ 22.8333*scale,startX+ (17.708333+15.625)*scale,startY+ 22.8333*scale);
 
-
+strokeWeight(0.127*30);
 
 
 	// room divider
