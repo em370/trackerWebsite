@@ -12,7 +12,7 @@
 		img2 = loadImage('../assets/cam2.png');
 	}
 function setup() {
-	var cnv = createCanvas(windowWidth, windowHeight);
+	var cnv = createCanvas(windowWidth, windowHeight-100);
   cnv.style('display', 'block');
   cnv.parent('sketchContainer');
     scale = 20;
@@ -43,7 +43,7 @@ function draw() {
 
 
 
-strokeWeight(0.127*scale);
+strokeWeight(0.127*100);
 	stroke(0);
 	//left wall
 	line(startX, startY,startX,startY+ 22.8333*scale);
@@ -58,7 +58,7 @@ strokeWeight(0.127*scale);
    // right-top half
  	line(startX+ 17.708333*scale,startY,startX+ (17.708333+15.625)*scale,startY);
 	// left-bottom half
- 	line(startX+ 12.8333*scale, startY+ 22.8333*scale,startX+ (12.8333+15.625)*scale,startY+ 22.8333*scale);
+ 	line(startX+ 14.8333*scale, startY+ 22.8333*scale,startX+ (17.708333+15.625)*scale,startY+ 22.8333*scale);
 
 
 
