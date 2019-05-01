@@ -46,20 +46,19 @@ function draw() {
 strokeWeight(0.127*100);
 	stroke(0);
 	//left wall
-	line(startX, startY,startX,startY+ 6.96*scale);
+	line(startX, startY,startX,startY+ 22.8333*scale);
 
 	// image(img1,startX+0.308*scale,startY+ 2.286*scale, 30, 30);
   // left-top half
-	line(startX, startY,startX+ 10.16*scale,startY);
+	line(startX, startY,startX+ 17.708333*scale,startY);
  // left-bottom half
-	line(startX, startY+ 6.96*scale,startX+ 10.16*scale,startY+ 6.96*scale);
-	line(startX+10.16*, startY,startX+ 10.16*scale,startY+ 6.96*scale);
+	line(startX, startY+ 22.8333*scale,startX+ 11.8333*scale,startY+ 22.8333*scale);
 	// right wall
- 	//line(startX+ (17.708333+15.625)*scale,startY,startX+ (17.708333+15.625)*scale,startY+ 22.8333*scale);
+ 	line(startX+ (17.708333+15.625)*scale,startY,startX+ (17.708333+15.625)*scale,startY+ 22.8333*scale);
    // right-top half
- 	//line(startX+ 17.708333*scale,startY,startX+ (17.708333+15.625)*scale,startY);
+ 	line(startX+ 17.708333*scale,startY,startX+ (17.708333+15.625)*scale,startY);
 	// left-bottom half
- 	//line(startX+ 14.8333*scale, startY+ 22.8333*scale,startX+ (17.708333+15.625)*scale,startY+ 22.8333*scale);
+ 	line(startX+ 14.8333*scale, startY+ 22.8333*scale,startX+ (17.708333+15.625)*scale,startY+ 22.8333*scale);
 
 strokeWeight(0.127*30);
 
