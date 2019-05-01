@@ -52,8 +52,18 @@ strokeWeight(0.127*scale);
   // left-top half
 	line(startX, startY,startX+ 17.708333*scale,startY);
  // left-bottom half
-	line(startX, startY+ 4.013*scale,startX+ 4.24*scale,startY+ 4.013*scale);
-  // room divider
+	line(startX, startY+ 22.8333*scale,startX+ 11.8333*scale,startY+ 22.8333*scale);
+	// right wall
+ 	line(startX+ (17.708333+15.625)*scale,startY,startX+ (17.708333+15.625)*scale,startY+ 22.8333*scale);
+   // right-top half
+ 	line(startX+ 17.708333*scale,startY,startX+ (17.708333+15.625)*scale,startY);
+	// left-bottom half
+ 	line(startX+ 12.8333*scale, startY+ 22.8333*scale,startX+ (12.8333+15.625)*scale,startY+ 22.8333*scale);
+
+
+
+
+	// room divider
 	// line(startX+ 4.24*scale, startY,startX+ 4.24*scale,startY+ (3)*scale);
   // room 2- top corridor
 	// line(startX+ 4.24*scale,startY+ 2.769*scale,startX+ (4.24+1.651)*scale,startY+ 2.769*scale);
@@ -63,10 +73,7 @@ strokeWeight(0.127*scale);
 	// line(startX+ (4.24+1.651)*scale,startY+ 2.769*scale,startX+ (4.24+1.651)*scale,startY+ (2.769+0.406)*scale);
  // room2 wall - corridor - door
 	// line(startX+ (4.24+1.651)*scale,startY+ (2.769+0.406)*scale,startX+ (4.24+1.651+1.805)*scale,startY+ (2.769+0.406)*scale);
- // right wall
-	line(startX+ (4.24+1.651+1.805+0.914)*scale,startY+ (2.769+0.406)*scale,startX+ (4.24+1.651+1.805+0.914)*scale,startY+ (2.769+0.406-3.175)*scale);
-  // right-top half
-	line(startX+ (4.24+1.651+1.805+0.914)*scale,startY+ (2.769+0.406-3.175)*scale,startX+ (4.24+1.651+1.805+0.914-4.37)*scale,startY+ (2.769+0.406-3.175)*scale);
+
   // outside corridor
 	// line(startX+ (4.24+1.651+1.805+0.914)*scale,startY+ (2.769+0.406)*scale,startX+ (4.24+1.651+1.805+0.914+1)*scale,startY+ (2.769+0.406)*scale);
 
