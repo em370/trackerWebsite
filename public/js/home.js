@@ -15,7 +15,7 @@ function setup() {
 	var cnv = createCanvas(windowWidth, windowHeight-150);
   cnv.style('display', 'block');
   cnv.parent('sketchContainer');
-    scale = 20;
+    scale = 60;
 	startX = windowWidth/6;
 	startY = 20;
 	// Starts in the middle
