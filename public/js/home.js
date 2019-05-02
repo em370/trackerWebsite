@@ -10,14 +10,15 @@
 	  myFont = loadFont('../assets/map1.otf');
 		img1 = loadImage('../assets/cam1.png');
 		img2 = loadImage('../assets/cam2.png');
+		img3 = loadImage('../assets/cam3.png');
 	}
 function setup() {
 	var cnv = createCanvas(windowWidth, windowHeight-150);
   cnv.style('display', 'block');
   cnv.parent('sketchContainer');
-    scale = 60;
+    scale = 100;
 	startX = windowWidth/6;
-	startY = 20;
+	startY = 30;
 	// Starts in the middle
 	// x = width / 2;
 	// y = height;
@@ -43,7 +44,7 @@ function draw() {
 
 
 
-strokeWeight(0.127*100);
+strokeWeight(0.127*scale);
 	stroke(0);
 	//left wall
 	line(startX, startY,startX,startY+ 6.96*scale);
@@ -61,7 +62,32 @@ strokeWeight(0.127*100);
 	// left-bottom half
  	//line(startX+ 14.8333*scale, startY+ 22.8333*scale,startX+ (17.708333+15.625)*scale,startY+ 22.8333*scale);
 
-strokeWeight(0.127*30);
+	strokeWeight(0.127*30);
+	//Table 1
+	//left side
+	line(startX+1.9558*scale, startY+1.9812*scale, startX+1.9558*scale, startY+4.826*scale);
+	//right side
+	line(startX+3.7846*scale, startY+1.9812*scale, startX+3.7846*scale, startY+4.826*scale);
+	//top
+	line(startX+1.9558*scale, startY+1.9812*scale, startX+3.7846*scale, startY+1.9812*scale);
+	//bottom
+	line(startX+1.9558*scale, startY+4.826*scale, startX+3.7846*scale, startY+4.826*scale);
+	//camera 3
+	image(img3,startX+3.5*scale,startY+ 4.7*scale, 30, 30);
+
+	//Table 2
+	//left side
+	line(startX+5.3975*scale, startY+1.7272*scale, startX+5.3975*scale, startY+3.8608*scale);
+	//right side
+	line(startX+7.2263*scale, startY+1.7272*scale, startX+7.2263*scale, startY+3.8608*scale);
+	//top
+	line(startX+5.3975*scale, startY+1.7272*scale, startX+7.2263*scale, startY+1.7272*scale);
+	//camera 1
+	image(img1,startX+5.6*scale,startY+ 1.9*scale, 30, 30);
+	//bottom
+	line(startX+5.3975*scale, startY+3.8608*scale, startX+7.2263*scale, startY+3.8608*scale);
+	//camera 2
+	image(img3,startX+5.5*scale,startY+ 3.6*scale, 30, 30);
 
 
 	// room divider
