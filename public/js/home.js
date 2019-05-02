@@ -73,7 +73,7 @@ strokeWeight(0.127*scale);
 	//bottom
 	line(startX+1.9558*scale, startY+4.826*scale, startX+3.7846*scale, startY+4.826*scale);
 	//camera 3
-	image(img3,startX+3.5*scale,startY+ 4.7*scale, 30, 30);
+	image(img2,startX+3.45*scale,startY+ 4.45*scale, 30, 30);
 
 	//Table 2
 	//left side
@@ -83,11 +83,11 @@ strokeWeight(0.127*scale);
 	//top
 	line(startX+5.3975*scale, startY+1.7272*scale, startX+7.2263*scale, startY+1.7272*scale);
 	//camera 1
-	image(img1,startX+5.6*scale,startY+ 1.9*scale, 30, 30);
+	image(img1,startX+5.9*scale,startY+ 1.9*scale, 30, 30);
 	//bottom
 	line(startX+5.3975*scale, startY+3.8608*scale, startX+7.2263*scale, startY+3.8608*scale);
 	//camera 2
-	image(img3,startX+5.5*scale,startY+ 3.6*scale, 30, 30);
+	image(img2,startX+5.5*scale,startY+ 3.6*scale, 30, 30);
 
 
 	// room divider
