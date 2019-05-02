@@ -14,7 +14,7 @@
 		img4 = loadImage('../assets/cam4.png');
 	}
 function setup() {
-	var cnv = createCanvas(windowWidth, windowHeight-200);
+	var cnv = createCanvas(windowWidth, windowHeight-220);
   cnv.style('display', 'block');
   cnv.parent('sketchContainer');
   scale = 90;
