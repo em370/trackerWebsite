@@ -14,10 +14,10 @@
 		img4 = loadImage('../assets/cam4.png');
 	}
 function setup() {
-	var cnv = createCanvas(windowWidth, windowHeight-150);
+	var cnv = createCanvas(windowWidth, windowHeight-200);
   cnv.style('display', 'block');
   cnv.parent('sketchContainer');
-    scale = 90;
+  scale = 90;
 	startX = windowWidth/4;
 	startY = 30;
 	// Starts in the middle
@@ -46,6 +46,24 @@ function draw() {
 
 
 strokeWeight(0.127*100);
+
+	textFont(myFont);
+	textSize(60);
+	stroke(60, 20, 20);
+	fill(	60, 20, 20);
+	// stroke(139,69,19);
+	// fill(160,82,45);
+	textAlign(CENTER, CENTER);
+	text("BTU Lab", startX-170, startY+40);
+	// textSize(20);
+	// text("Cam3", startX+3.35*scale,startY+ 4.3*scale);
+	// text("Cam1", startX+6*scale,startY+ 2.2*scale);
+	// text("Cam2", startX+5.7*scale,startY+ 3.3*scale);
+	//
+	// text("Laptop 3", startX+3.1*scale,startY+ 4.3*scale);
+	// text("Laptop 1", startX+6*scale,startY+ 2.2*scale);
+	// text("Laptop 2", startX+6.2*scale,startY+ 3.4*scale);
+
 	stroke(0);
 	//left wall
 	line(startX, startY,startX,startY+ 6.96*scale);
@@ -74,7 +92,7 @@ strokeWeight(0.127*100);
 	//bottom
 	line(startX+1.9558*scale, startY+4.826*scale, startX+3.7846*scale, startY+4.826*scale);
 	//camera 3
-	image(img2,startX+3.45*scale,startY+ 4.45*scale, 30, 30);
+	image(img2,startX+3.35*scale,startY+ 4.45*scale, 30, 30);
 
 	//Table 2
 	//left side
