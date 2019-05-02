@@ -17,8 +17,8 @@ function setup() {
 	var cnv = createCanvas(windowWidth, windowHeight-150);
   cnv.style('display', 'block');
   cnv.parent('sketchContainer');
-    scale = 100;
-	startX = windowWidth/6;
+    scale = 90;
+	startX = windowWidth/4;
 	startY = 30;
 	// Starts in the middle
 	// x = width / 2;
@@ -45,7 +45,7 @@ function draw() {
 
 
 
-strokeWeight(0.127*scale);
+strokeWeight(0.127*100);
 	stroke(0);
 	//left wall
 	line(startX, startY,startX,startY+ 6.96*scale);
@@ -84,11 +84,11 @@ strokeWeight(0.127*scale);
 	//top
 	line(startX+5.3975*scale, startY+1.7272*scale, startX+7.2263*scale, startY+1.7272*scale);
 	//camera 1
-	image(img4,startX+5.9*scale,startY+ 1.9*scale, 30, 30);
+	image(img4,startX+5.9*scale,startY+ 1.8*scale, 30, 30);
 	//bottom
 	line(startX+5.3975*scale, startY+3.8608*scale, startX+7.2263*scale, startY+3.8608*scale);
 	//camera 2
-	image(img2,startX+5.5*scale,startY+ 3.6*scale, 30, 30);
+	image(img2,startX+5.5*scale,startY+ 3.5*scale, 30, 30);
 
 
 	// room divider
