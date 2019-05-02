@@ -42,11 +42,6 @@ function draw() {
 	// -->yellow
 	background(227, 210, 157);
 	// background(200);
-
-
-
-strokeWeight(0.127*100);
-
 	textFont(myFont);
 	textSize(60);
 	stroke(60, 20, 20);
@@ -63,7 +58,7 @@ strokeWeight(0.127*100);
 	// text("Laptop 3", startX+3.1*scale,startY+ 4.3*scale);
 	// text("Laptop 1", startX+6*scale,startY+ 2.2*scale);
 	// text("Laptop 2", startX+6.2*scale,startY+ 3.4*scale);
-
+  strokeWeight(0.127*100);
 	stroke(0);
 	//left wall
 	line(startX, startY,startX,startY+ 6.96*scale);
