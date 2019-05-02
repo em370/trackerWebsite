@@ -11,6 +11,7 @@
 		img1 = loadImage('../assets/cam1.png');
 		img2 = loadImage('../assets/cam2.png');
 		img3 = loadImage('../assets/cam3.png');
+		img4 = loadImage('../assets/cam4.png');
 	}
 function setup() {
 	var cnv = createCanvas(windowWidth, windowHeight-150);
@@ -83,7 +84,7 @@ strokeWeight(0.127*scale);
 	//top
 	line(startX+5.3975*scale, startY+1.7272*scale, startX+7.2263*scale, startY+1.7272*scale);
 	//camera 1
-	image(img1,startX+5.9*scale,startY+ 1.9*scale, 30, 30);
+	image(img4,startX+5.9*scale,startY+ 1.9*scale, 30, 30);
 	//bottom
 	line(startX+5.3975*scale, startY+3.8608*scale, startX+7.2263*scale, startY+3.8608*scale);
 	//camera 2
